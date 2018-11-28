@@ -15,9 +15,13 @@ Female <- filter(abac,sex=="F")
 # Introduction
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
-
-A new  preventative aides (abacavirinol) is under test in clinical trials. Analyze the effectiveness of this drug across the board. Consider population subgroups by gender, drug use, and sexual orientation. Finish this!
-
+  
+A new  preventative aides medictaion (abacavirinol) is under test in clinical trials. Analyze the effectiveness of this drug across the board. Consider population subgroups by gender, drug use, and sexual orientation.
+  
+Finish this!
+  
+There are 4,927 people involved in this study, and 5 variables were observed. Those five variables were type of treatment, sex, whether or not they got infected with the HIV virus, whether or not they are IV drug users, and whether or not they belong to the LGBT community. From this study of 4,927 participants, 2,289 were male and 2,638 were female. 601 participants were LGBT, while 707 used IV drugs. This study was similair to the RV144 rial done in Thailand in 2009.
+  
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
