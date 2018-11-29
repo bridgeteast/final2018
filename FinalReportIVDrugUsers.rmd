@@ -1,5 +1,5 @@
 ---
-title: "Abacavirinol Drug Users"
+title: "Abacavirinol IV Drug Users"
 author: "Bridget East"
 date: "11/26/18"
 output: html_document
@@ -25,11 +25,15 @@ There are 4,927 people involved in this study, and 5 variables were observed. Th
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
-
+  
+For this project we are going to observe the results on the participants that use IV drugs. We will look at graphical results using barchartGC, numerical results using colPerc and rowPerc, and inferential results using chisqtestGC,and fisher.test and I will explain all of the results from each individual R block.
+  
 #Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
-
+  
+There are three types of results in this section for us to observe; Graphical, Numerical, and Inferential.
+  
 ## Descriptive Results
 
 ### Graphical Descriptive Results
@@ -41,6 +45,8 @@ drugusersresults<-xtabs(~infected+treatment,data=DrugUse)
 barchartGC(drugusersresults,type = "percent")
 ```
    
+This is a bar chart that shows the treatments used and the percent of IV drug users who were infected with aids and those who were not. It looks as though more IV drug users infected had taken the placebo than those who took the drug. It looks like there is almost a sixty percent difference between the different types of treatments.
+   
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -49,7 +55,8 @@ barchartGC(drugusersresults,type = "percent")
 colPerc(drugusersresults)
 rowPerc(drugusersresults)
 ```
-
+  
+According to the numerical results, three percent of drug users who took the medication were infected, while seven percent who took the placebo were infected. So it looks as if the medication was slightly effective according to colPerc. Going off of rowPerc, twenty five percent that were affected took the medication and almost seventy five percent that were affected took the placebo, the medication looks very effective.
   
 ## Inferential Results
 
@@ -62,10 +69,9 @@ chisqtestGC(drugusersresults, graph = TRUE)
 ```{r}
 fisher.test(drugusersresults)
 ```
-  
-I reject the null hypothesis, p value is low. null hypothesis stuff doesnt work things are not happpening
-  
-  
+
+The null hypothesis is that there is no significant difference between specified populations, any observed difference is being due to sampling or experimental error.
+We reject the null hypothesis, P-value is below 0.05. So in the drug user community the drug was not effective because they are  not related. The medication was not effective in the drug user community.
 
 # Discussion and Conclusion
 

@@ -25,11 +25,15 @@ There are 4,927 people involved in this study, and 5 variables were observed. Th
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
-
+  
+For this project we are going to observe the results of the study from only the male participants. We will look at graphical results using barchartGC, numerical results using colPerc and rowPerc, and inferential results using chisqtestGC,and fisher.test and I will explain all of the results from each individual R block.
+  
 #Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
-
+  
+There are three types of results in this section for us to observe; Graphical, Numerical, and Inferential.
+  
 ## Descriptive Results
 
 ### Graphical Descriptive Results
@@ -37,9 +41,11 @@ There are 4,927 people involved in this study, and 5 variables were observed. Th
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
    
 ```{r}
-maleresults<-xtabs(~infected+treatment,data=abac)
+maleresults<-xtabs(~infected+treatment,data=Male)
 barchartGC(maleresults,type = "percent")
 ```
+   
+This is a bar chart that shows the treatments used and the percent of males who were infected with aids and those who were not. It looks as though more males infected had taken the placebo than those who took the drug. It looks like there is almost a forty percent difference between the different types of treatments.
    
 ### Numerical Descriptive Results
 
@@ -49,7 +55,8 @@ barchartGC(maleresults,type = "percent")
 colPerc(maleresults)
 rowPerc(maleresults)
 ```
-
+  
+According to the numerical results, four percent of males who took the drug were infected, while eight percent who took the placebo were infected. So it looks as if the medication was slightly effective according to colPerc. Going off of rowPerc, thirty percent that were affected took the drug and almost 70 percent that were affected took the placebo, the medication looks very effective.
   
 ## Inferential Results
 
@@ -62,8 +69,9 @@ chisqtestGC(maleresults, graph = TRUE)
 ```{r}
 fisher.test(maleresults)
 ```
-  
-I reject the null hypothesis, p value is low. null hypothesis stuff doesnt work things are not happpening
+ 
+The null hypothesis is that there is no significant difference between specified populations, any observed difference is being due to sampling or experimental error.
+We reject the null hypothesis, p-value is extremely low. So for males in general the drug didnt have an effect on HIV virus.
   
   
 

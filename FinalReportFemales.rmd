@@ -25,11 +25,15 @@ There are 4,927 people involved in this study, and 5 variables were observed. Th
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
-
+  
+For this project we are going to observe results from the female participants. We will look at graphical results using barchartGC, numerical results using colPerc and rowPerc, and inferential results using chisqtestGC,and fisher.test and I will explain all of the results from each individual R block.
+  
 #Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
-
+  
+There are three types of results in this section for us to observe; Graphical, Numerical, and Inferential.
+  
 ## Descriptive Results
 
 ### Graphical Descriptive Results
@@ -41,6 +45,8 @@ femaleresults<-xtabs(~infected+treatment,data=Female)
 barchartGC(femaleresults,type = "percent")
 ```
    
+This is a bar chart that shows the treatments used and the percent of females who were infected with aids and those who were not. It looks as though more females infected had taken the medication than those who took the placebo. It looks like there is a twenty percent difference between the different types of treatments.
+   
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -49,7 +55,8 @@ barchartGC(femaleresults,type = "percent")
 colPerc(femaleresults)
 rowPerc(femaleresults)
 ```
-
+  
+According to the numerical results, four percent of women who took the drug were infected, while two percent who took the placebo were infected. So it looks as if the medication was not effective according to colPerc. Going off of rowPerc, fifty nine percent that were affected took the drug and forty percent that were affected took the placebo, the medication looks like it is not effective.
   
 ## Inferential Results
 
@@ -63,9 +70,8 @@ chisqtestGC(femaleresults, graph = TRUE)
 fisher.test(femaleresults)
 ```
   
-I reject the null hypothesis, p value is low. null hypothesis stuff doesnt work things are not happpening
-  
-  
+The null hypothesis is that there is no significant difference between specified populations, any observed difference is being due to sampling or experimental error.
+We fail to reject the null hypothesis, P-value is above 0.05. So in the general woman participants the drug was very effective because they are correlated. The drug was effective in the woman participants. 
 
 # Discussion and Conclusion
 
