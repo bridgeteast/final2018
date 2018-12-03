@@ -66,14 +66,20 @@ According to the numerical results, six percent of LGBT community who took the d
 chisqtestGC(lgbtresults, graph = TRUE)
 ```
   
+The null hypothesis is that there is no significant difference between specified populations, any observed difference is being due to sampling or experimental error.
+A large p-value (> 0.05) indicates weak evidence against the null hypothesis, so you fail to reject the null hypothesis. p -values very close to the cutoff (0.05) are considered to be marginal (could go either way).
+We fail to reject the null hypothesis, P-value is above 0.05. So this means there is something wrong with the evidence and the results are not reliable. 
+  
 ```{r}
 fisher.test(lgbtresults)
 ```
  
-The null hypothesis is that there is no significant difference between specified populations, any observed difference is being due to sampling or experimental error.
-We fail to reject the null hypothesis, P-value is above 0.05. So in the LGBT community the drug was very effective because they are related. The drug was effective in the LGBT community.
+We fail to reject the null hypothesis, P-value is above 0.05. It is .05698 which is pretty close to .05 and lower than the P-value of the ChiSquared test, so I can see why the two seperate tests are important to run, they produce different P-values. The P-value is close to .05, but still above it and my other result was above it so we fail to reject the null hypothesis.
   
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+  
+Results are to close to tell if medication made a difference and we fail to reject null hypothesis in LGBT community. The medication did not make a significant difference in the LGBT community.
+  

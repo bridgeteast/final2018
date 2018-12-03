@@ -66,15 +66,20 @@ According to the numerical results, four percent of males who took the drug were
 chisqtestGC(maleresults, graph = TRUE)
 ```
   
+The null hypothesis is that there is no significant difference between specified populations, any observed difference is being due to sampling or experimental error.
+A large p-value (> 0.05) indicates weak evidence against the null hypothesis, so you fail to reject the null hypothesis. p -values very close to the cutoff (0.05) are considered to be marginal (could go either way).
+We reject the null hypothesis, P-value is well below 0.05. So this means there is nothing wrong with the experiment and the results are reliable. 
+  
 ```{r}
 fisher.test(maleresults)
 ```
  
-The null hypothesis is that there is no significant difference between specified populations, any observed difference is being due to sampling or experimental error.
-We reject the null hypothesis, p-value is extremely low. So for males in general the drug didnt have an effect on HIV virus.
-  
+We reject the null hypothesis, P-value is below 0.05. It is .000004 which is really low and slightly higher than the P-value of the ChiSquared test, so I can see why the two seperate tests are important to run, they produce different P-values, but still very very low.
   
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+  
+It looks as though the drug is effective in males and we reject the null hypothesis. More males that had gotten aids had taken the placebo then those who had taken the drug. This drug could be beneficial for males.
+  
